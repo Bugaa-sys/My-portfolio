@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Evans Siango">
+    <title>Evans Siango - Web Developer</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #333;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .navbar h1 {
+            font-size: 2rem;
+        }
+
+        .navbar nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .navbar nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .navbar nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* Profile Picture */
+        .profile-pic {
+            width: 60px; /* Adjust size as necessary */
+            height: 60px; /* Adjust size as necessary */
+            border-radius: 50%; /* This makes it round */
+            object-fit: cover; /* Ensures the image doesn't stretch or distort */
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: #282828;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        #hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        #hero button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            cursor: pointer;
+        }
+
+        #hero button:hover {
+            background-color: #45a049;
+        }
+
+        /* About Section */
+        #about {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Services Section */
+        #services {
+            padding: 50px 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        #services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            background-color: #fff;
+            padding: 20px;
+            width: 280px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .service p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .service:hover h3 {
+            color: #4CAF50;
+        }
+
+        .service:hover p {
+            color: #333;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 50px 20px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        #contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        #contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        #contact input, #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #contact button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #contact button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .services-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <img src="IMG/WhatsApp Image 2024-12-13 at 15.47.43_73b2c1de.jpg" alt="Tech Guru!" class="profile-pic">
+            <h1>Evans Siango</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h2>Welcome to my Digital Showcase!</h2>
+        <p>I'm Evans Siango, a passionate web developer. Let's create something amazing together!</p>
+        <button id="learnMore">Learn More</button>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a web developer with a passion for creating stunning, responsive websites. With expertise in HTML, CSS, JavaScript, and more, I help businesses bring their ideas to life online.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Web Development</h3>
+                <p>Building modern, responsive websites that look great on all devices.</p>
+            </div>
+            <div class="service">
+                <h3>SEO Optimization</h3>
+                <p>Ensuring your website ranks high on search engines to reach a larger audience.</p>
+            </div>
+            <div class="service">
+                <h3>Website Maintenance</h3>
+                <p>Providing ongoing support and maintenance to keep your website up to date.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to work with me or have any questions, feel free to reach out!</p>
+        <form id="contactForm" action="mailto:evanssiango@gmail.com" method="post" enctype="text/plain">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        
+        <div class="social-icons">
+            <a href="https://wa.me/+254742042152" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/evans_oooooo" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/evans_oooooo" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Evans Siango | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.getElementById("learnMore").addEventListener("click", function() {
+            alert("You will learn more about me soon!");
+        });
+    </script>
+</body>
+</html>
